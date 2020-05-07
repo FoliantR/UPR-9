@@ -14,8 +14,8 @@ namespace ConsoleApp1
                     List<Person> PersonArray = new List<Person>();
                     PersonArray.Add(new Person("Мужчина", 11, "Игорь", "Рак")); // void Add
                     List<Person> TempPersonArray = new List<Person>();
-                    Person person2 = new Person("Женщина", 12, "Ира", "Дева");
-                    TempPersonArray.Add(person2);
+                    Person person2;
+                    TempPersonArray.Add(person2 = new Person("Женщина", 12, "Ира", "Дева"));
                     TempPersonArray.Add(new Person("Мужчина", 15, "Виктор", "Телец"));
                     PersonArray.AddRange(TempPersonArray); // void AddRange
                     Console.WriteLine($"Результат работы BinarySearch ({PersonArray[PersonArray.BinarySearch(person2)].show()})"); // int BinarySearch
